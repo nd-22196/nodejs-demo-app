@@ -1,0 +1,45 @@
+import random
+
+
+def generate_story(character, setting, mood):
+    story_openings = [
+        f"{character} woke up one morning feeling incredibly {mood}.",
+        f"In the heart of {setting}, {character} began an unusual day.",
+        f"{character} always believed in dreams, but today felt different.",
+    ]
+
+    conflicts = [
+        f"Suddenly, a strange sound echoed through the {setting}.",
+        f"Out of nowhere, a mysterious figure appeared before {character}.",
+        f"The wind whispered secrets that only {character} could hear.",
+    ]
+
+    actions = [
+        f"With courage, {character} decided to follow the clues.",
+        f"{character} took a deep breath and walked towards the unknown.",
+        f"A spark of curiosity led {character} deeper into the {setting}.",
+    ]
+
+    resolutions = [
+        f"And in the end, {character} discovered something magical.",
+        f"Surprisingly, the journey turned out to be the best adventure ever.",
+        f"{character} returned home with a heart full of stories and wisdom.",
+    ]
+
+    # Pick random lines
+    story = [
+        random.choice(story_openings),
+        random.choice(conflicts),
+        random.choice(actions),
+        random.choice(resolutions)
+    ]
+
+    return "\n".join(story)
+
+
+# -----------------------------
+# RUN THE STORY GENERATOR
+# -----------------------------
+character = input("Enter a character name: ")
+setting = input("Enter a setting: ")
+mood = input("Enter a mood (happy, mysterious, adventurous, etc.): ")
